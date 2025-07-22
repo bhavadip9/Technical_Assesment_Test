@@ -42,6 +42,8 @@
      gap: 5px;
  }
 
+
+
  .order-summary {
 
      margin-top: 15px;
@@ -104,4 +106,50 @@
      color: red;
      font-size: 14px;
 
+ }
+
+ .payment-options input[type="radio"] {
+     display: none;
+
+ }
+
+ .payment-options label {
+     position: relative;
+     padding-left: 30px;
+     margin-right: 20px;
+     cursor: pointer;
+ }
+
+ .payment-options label::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 2px;
+     width: 12px;
+     height: 12px;
+     border: 2px solid #aaa;
+     border-radius: 50%;
+     background: white;
+ }
+
+ .payment-options input[type="radio"]:checked+label::before {
+     background-color: #f2f4f6;
+     border-color: #007bff;
+ }
+
+ .payment-options label::after {
+     content: "";
+     position: absolute;
+     left: 3px;
+     top: 5.2px;
+     width: 9px;
+     height: 9px;
+     border-radius: 50%;
+     background: white;
+     display: none;
+ }
+
+ .payment-options input[type="radio"]:checked+label::after {
+     display: block;
+     background: #007bff;
  }
