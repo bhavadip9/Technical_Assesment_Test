@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Backend_Api.Controllers.CheckoutController",
+    "Method": "Submit",
+    "RelativePath": "api/Checkout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Backend_Api.Models.CheckoutRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
