@@ -1,20 +1,25 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
-namespace Backend_Api.Models
+namespace Backend_Api.Models;
+
+public partial class CheckoutRequest
 {
-    public class CheckoutRequest
-    {
+    [Key]
+    public int Id { get; set; }
 
-        [Required(ErrorMessage = "Full Name is required")]
-        public required string FullName { get; set; }
+    [StringLength(100)]
+    public string FullName { get; set; } = null!;
 
-        [Required(ErrorMessage = "Email is required")]
-        public required string Email { get; set; }
+    [StringLength(100)]
+    public string Email { get; set; } = null!;
 
-        [Required(ErrorMessage = "Address is required")]
-        public required string Address { get; set; }
+    [StringLength(200)]
+    public string Address { get; set; } = null!;
 
-        [Required(ErrorMessage = "Payment Method is required")]
-        public required string PaymentMethod { get; set; }
-    }
+    [StringLength(50)]
+    public string PaymentMethod { get; set; } = null!;
 }
